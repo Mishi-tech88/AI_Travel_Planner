@@ -12,6 +12,25 @@ Generate personalized travel itineraries using three prompting techniques:
 - Three prompting techniques for comparison
 - CLI + Streamlit web UI
 
+
 ---
 
-## 🗂️ Project Structure
+## ⚙️ Setup
+
+```bash
+# 1. Clone / create project folder
+mkdir ai-travel-planner && cd ai-travel-planner
+
+# 2. Create virtual environment
+python -m venv venv
+venv\Scripts\activate          # Windows
+source venv/bin/activate       # macOS/Linux
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Add your Gemini API key
+# Create .env file:
+GEMINI_API_KEY=your_api_key_here
+
+
