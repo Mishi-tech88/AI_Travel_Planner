@@ -1,4 +1,4 @@
-# ✈️ AI Travel Planner (Google Gemini)
+# ✈️ AI Travel Planner
 
 Generate personalized travel itineraries using three prompting techniques:
 **Zero-Shot**, **Few-Shot**, and **Structured Reasoning**.
