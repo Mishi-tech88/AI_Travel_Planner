@@ -18,7 +18,8 @@ Generate personalized travel itineraries using three prompting techniques:
 
 ```bash
 # 1. Clone / create project folder
-mkdir ai-travel-planner && cd ai-travel-planner
+mkdir ai-travel-planner
+cd ai-travel-planner
 ```
 ```bash
 # 2. Create virtual environment
@@ -35,4 +36,10 @@ pip install -r requirements.txt
 # Create .env file:
 GEMINI_API_KEY=your_api_key_here
 ```
-
+```bash
+#run on localhost
+uvicorn main:app --reload # Uvicorn running on http://127.0.0.1:8000
+# run CLI
+python main.py
+```
+Get a free API key: https://aistudio.google.com/app/apikey
