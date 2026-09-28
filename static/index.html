@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Travel Planner</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>✈️ AI Travel Planner</h1>
+      <p class="subtitle">Generate a personalized itinerary in seconds.</p>
+    </header>
+
+    <form id="trip-form">
+      <div class="grid">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" type="text" value="John" required />
+        </div>
+
+        <div class="field">
+          <label for="destination">Destination</label>
+          <input id="destination" type="text" value="United States" required />
+        </div>
+
+        <div class="field">
+          <label for="days">Number of Days</label>
+          <input id="days" type="number" min="1" max="365" value="7" required />
+        </div>
+
+        <div class="field">
+          <label for="budget">Budget (USD)</label>
+          <input id="budget" type="number" min="1" value="1500" required />
+        </div>
+
+        <div class="field full">
+          <label for="interests">Interests (comma-separated)</label>
+          <input id="interests" type="text" value="Food, Beaches, Oceans, Mountains" />
+        </div>
+
+        <div class="field">
+          <label for="travel_style">Travel Style</label>
+          <select id="travel_style">
+            <option>Solo</option>
+            <option>Family</option>
+            <option>Friends</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="technique">Prompting Technique</label>
+          <select id="technique">
+            <option value="zero-shot">Zero-Shot</option>
+            <option value="few-shot">Few-Shot</option>
+            <option value="structured">Structured Reasoning</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" id="generate-btn">
+        <span class="btn-text">Generate Itinerary</span>
+        <span class="spinner" hidden></span>
+      </button>
+    </form>
+
+    <section id="result" class="result" hidden>
+      <div class="result-header">
+        <h2>Your Itinerary</h2>
+        <button id="download-btn" class="secondary">Download</button>
+      </div>
+      <pre id="itinerary-text"></pre>
+    </section>
+
+    <div id="error" class="error" hidden></div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
