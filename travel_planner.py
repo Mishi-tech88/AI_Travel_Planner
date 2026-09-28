@@ -74,35 +74,3 @@ def generate_itinerary(client, user_data, technique, max_retries=5):
                 return f"Error generating itinerary: {e}"
 
     return "Error: Failed to generate itinerary after all retry attempts."
-
-
-    # # travel_planner.py
-# from prompts import (
-#     build_zero_shot_prompt,
-#     build_few_shot_prompt,
-#     build_structured_reasoning_prompt,
-# )
-
-# PROMPT_BUILDERS = {
-#     "zero-shot": build_zero_shot_prompt,
-#     "few-shot": build_few_shot_prompt,
-#     "structured": build_structured_reasoning_prompt,
-# }
-
-# def generate_itinerary(model, user_data, technique):
-#     """Generate itinerary using the chosen prompting technique."""
-#     technique = technique.lower().strip()
-    
-#     if technique not in PROMPT_BUILDERS:
-#         raise ValueError(
-#             f"Unknown technique '{technique}'. "
-#             f"Choose from: {list(PROMPT_BUILDERS.keys())}"
-#         )
-    
-#     prompt = PROMPT_BUILDERS[technique](user_data)
-    
-#     try:
-#         response = model.generate_content(prompt)
-#         return response.text
-#     except Exception as e:
-#         return f"Error generating itinerary: {e}"
